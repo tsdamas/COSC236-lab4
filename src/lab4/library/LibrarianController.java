@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class LibrarianController {
-	
-	private LIbrary library;
+	private Library library;
 	
 	public LibrarianController(Library library) {
 		this.library = library;
