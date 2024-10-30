@@ -19,6 +19,14 @@ public class Member {
 		this.name = name;
 	}
 	
+	public Integer getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(Integer memberId) {
+		this.memberId = memberId;
+	}
+
 	public ArrayList<Book> getBorrowedBooks() {
 		return borrowedBooks;
 	}
@@ -27,10 +35,9 @@ public class Member {
 		this.borrowedBooks = borrowedBooks;
 	}
 	
-	// TODO: implement functionality of Member class
-
+	// DONE: implement functionality of Member class
 	public void borrowBook(Book book) {
-		if(book.getIsAvailable()) {
+		if(book.isAvailable()) {
 			this.borrowedBooks.add(book);	
 			book.setIsAvailable(false);
 		} else {
