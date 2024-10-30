@@ -8,10 +8,6 @@ import java.util.Scanner;
 
 public class LibraryApp {
 
- private ArrayList<String> availableBooks = new ArrayList<>();
- private HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
-
-  
 public static void main(String[] args) {
 	
 	 Library library = new Library();
