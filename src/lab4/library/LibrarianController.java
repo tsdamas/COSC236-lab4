@@ -21,8 +21,9 @@ public class LibrarianController {
 	 * @param memberId
 	 * @param title
 	 */
-	public void borrowBook(String memberId, String title) {
-        Member member = library.findMemberByName(memberId);
+	public void borrowBook(String title, String name) {
+        Member member = library.findMemberByName(name);
+        System.out.println(title);
         Book book = library.findBookByTitle(title);
 
         if (member != null && book != null) {
@@ -37,8 +38,8 @@ public class LibrarianController {
 	 * @param memberId
 	 * @param title
 	 */
-    public void returnBook(String memberId, String title) {
-        Member member = library.findMemberByName(memberId);
+    public void returnBook(String title, String name) {
+        Member member = library.findMemberByName(name);
         Book book = library.findBookByTitle(title);
 
         if (member != null && book != null) {
