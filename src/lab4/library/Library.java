@@ -16,7 +16,7 @@ public class Library {
 	
 	private ArrayList<Book> catalog;
 	// private members (list of Members)
-	private Hashtable<String, Member> members = new Hashtable<>();
+	private Hashtable<String, Member> members;
 	
 	public Library(ArrayList<Book> catalog, Hashtable<String,Member> members) {
 		this.members = members; 
