@@ -7,7 +7,7 @@ public class Member {
 	// GRASP Principle: Information Expert and Low Coupling
 	// Can borrow and return books.
 	private Integer memberId;
-	static Integer count;
+	static Integer count = 0;
 	private String name;
 	// private borrowedbBooks DONE: implement collection of borrowed books
 	private ArrayList<Book> borrowedBooks;
