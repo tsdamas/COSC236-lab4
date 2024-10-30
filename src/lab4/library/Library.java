@@ -14,14 +14,9 @@ public class Library {
 
 	// TODO: implement functionality of Member class
 	
-	private ArrayList<Book> catalog;
+	private ArrayList<Book> catalog = new ArrayList<>();
 	// private members (list of Members)
-	private Hashtable<String, Member> members;
-	
-	public Library(ArrayList<Book> catalog, Hashtable<String,Member> members) {
-		this.members = members; 
-		this.catalog = catalog; 
-	}
+	private Hashtable<String, Member> members = new Hashtable<>();
 	
 	public void addBook(String title, String author) {
 		Book book = new Book(title, author);
@@ -38,16 +33,36 @@ public class Library {
 	}
 	
 	
-	public void registerMember(Member member) {
-		members.put(member.getName(), member); 
+	public void registerMember(String name) {
+		Member member = new Member(name);
+		members.put(name, member); 
 	}
 	
-	public void removeMember(Member member) {
-		members.remove(member);
+	public void removeMember(String name) {
+		members.remove(name);
 	}
 	
 	public Member findMemberByName(String name) {
 		return members.get(name);
+	}
+	
+	 // Show the available books in the library
+	 public void showAvailableBooks() {
+	     System.out.println("Available Books:");
+	     for (Book book : catalog) {
+	    	 if(book.isAvailable()) {
+	    		 System.out.println(book);
+	    		 
+	    	 }
+	     }
+	 }
+
+	//Show members of in the library
+	public void showMembers() {
+	   System.out.println("Library members:");
+	   for (String member : members.keySet()) {
+	       System.out.println(member);
+	   }
 	}
 
 }
