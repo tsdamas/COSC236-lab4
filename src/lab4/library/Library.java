@@ -16,7 +16,7 @@ public class Library {
 	
 	private ArrayList<Book> catalog;
 	// private members (list of Members)
-	private Hashtable<String, Member> members = new Hashtable<>();
+	private Hashtable<String, Member> members;
 	
 	public Library(ArrayList<Book> catalog, Hashtable<String,Member> members) {
 		this.members = members; 
@@ -30,11 +30,11 @@ public class Library {
 	
 	public Book findBookByTitle(String title) {
 		for(int i = 0; i < catalog.size(); i++) {
-			//getTitle() not yet implemented
 			if(catalog.get(i).getTitle().equals(title)) {
 				return catalog.get(i);
 			}
 		}
+		return null;
 	}
 	
 	
