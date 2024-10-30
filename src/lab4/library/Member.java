@@ -16,6 +16,7 @@ public class Member {
 	public Member(String name) {
 		this.memberId = count;
 		this.name = name;
+		this.borrowedBooks = new ArrayList<>();
 		count++;
 	}
 
