@@ -22,11 +22,11 @@ public class Library {
 	
 	public Book findBookByTitle(String title) {
 		for(int i = 0; i < catalog.size(); i++) {
-			//getTitle() not yet implemented
 			if(catalog.get(i).getTitle().equals(title)) {
 				return catalog.get(i);
 			}
 		}
+		return null;
 	}
 
 }
